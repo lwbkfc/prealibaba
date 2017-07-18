@@ -51,6 +51,7 @@ public class ShiroConfiguration {
     public SessionManager getSessionManager(){
         DefaultWebSessionManager sessionManager = new DefaultWebSessionManager();
         Cookie cookie = new SimpleCookie("com_lin_alibaba_token");
+        cookie.setDomain("");
         sessionManager.setSessionIdCookie(cookie);
         return sessionManager;
     }
